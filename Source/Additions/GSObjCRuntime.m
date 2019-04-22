@@ -548,7 +548,7 @@ GSObjCAddMethods(Class cls, Method *list, BOOL replace)
       /* This will override a superclass method but will not replace a
        * method which already exists in the class itsself.
        */
-      if (YES == class_addMethod(cls, n, i, t))
+      if (YES == class_addMethod(cls, n, i, t)) // 覆盖父类方法
 	{
           BDBGPrintf("    added %c%s\n", c, sel_getName(n));
 	}
@@ -857,7 +857,7 @@ GSObjCAddClassBehavior(Class receiver, Class behavior)
   unsigned int	count;
   Method	*methods;
   Class behavior_super_class = class_getSuperclass(behavior);
-
+    // 如果是元类退出
   if (YES == class_isMetaClass(receiver))
     {
       fprintf(stderr, "Trying to add behavior (%s) to meta class (%s)\n",

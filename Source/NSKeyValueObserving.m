@@ -96,7 +96,7 @@ setup()
 	    NSNonOwnedPointerMapValueCallBacks, 1024);
 	  dependentKeyTable = NSCreateMapTable(NSNonOwnedPointerMapKeyCallBacks,
 	      NSOwnedPointerMapValueCallBacks, 128);
-	  baseClass = NSClassFromString(@"GSKVOBase");
+	  baseClass = NSClassFromString(@"GSKVOBase"); // 用来重写局部方法的模版类，主要有dealloc，class，superclass，KVC的setter
 	}
       [gnustep_global_lock unlock];
     }
@@ -176,9 +176,9 @@ setup()
  */
 @interface	GSKVOInfo : NSObject
 {
-  NSObject	        *instance;	// Not retained.
-  NSRecursiveLock	        *iLock;
-  NSMapTable	        *paths;
+  NSObject	        *instance;	// Not retained. // 不持有的实例
+  NSRecursiveLock	        *iLock; // 递归锁
+  NSMapTable	        *paths; // 不持有值的字典
 }
 - (GSKVOPathInfo *) lockReturningPathInfoForKey: (NSString *)key;
 - (void*) contextForObserver: (NSObject*)anObserver ofKeyPath: (NSString*)aPath;
@@ -472,7 +472,7 @@ cifframe_callback(ffi_cif *cif, void *retp, void **args, void *user)
   template = GSObjCMakeClass(name, superName, nil);
   GSObjCAddClasses([NSArray arrayWithObject: template]);
   replacement = NSClassFromString(name);
-  GSObjCAddClassBehavior(replacement, baseClass);
+  GSObjCAddClassBehavior(replacement, baseClass); // 动态创建子类，并使用模版类中方法，覆盖该子类
 
   /* Create the set of setter methods overridden.
    */
@@ -1478,16 +1478,16 @@ cifframe_callback(ffi_cif *cif, void *retp, void **args, void *user)
 	     options: (NSKeyValueObservingOptions)options
 	     context: (void*)aContext
 {
-  GSKVOInfo             *info;
-  GSKVOReplacement      *r;
-  NSKeyValueObservationForwarder *forwarder;
-  NSRange               dot;
+  GSKVOInfo             *info; //
+  GSKVOReplacement      *r; // 替换对象
+  NSKeyValueObservationForwarder *forwarder; // 转发者
+  NSRange               dot; // 是否含有.符号
 
-  setup();
+  setup(); // 各种初始化
   [kvoLock lock];
 
   // Use the original class
-  r = replacementForClass([self class]);
+  r = replacementForClass([self class]); // 创建替换子类，并重写局部方法
 
   /*
    * Get the existing observation information, creating it (and changing
@@ -1498,8 +1498,8 @@ cifframe_callback(ffi_cif *cif, void *retp, void **args, void *user)
   if (info == nil)
     {
       info = [[GSKVOInfo alloc] initWithInstance: self];
-      [self setObservationInfo: info];
-      object_setClass(self, [r replacement]);
+      [self setObservationInfo: info]; // 保存观察者信息
+      object_setClass(self, [r replacement]); // 替换类对象
     }
 
   /*
@@ -1507,7 +1507,7 @@ cifframe_callback(ffi_cif *cif, void *retp, void **args, void *user)
    */
   dot = [aPath rangeOfString:@"."];
   if (dot.location != NSNotFound)
-    {
+    {// 如果是KeyPath，转发观察者
       forwarder = [[NSKeyValueObservationForwarder alloc]
         initWithKeyPath: aPath
 	       ofObject: self
@@ -1519,7 +1519,7 @@ cifframe_callback(ffi_cif *cif, void *retp, void **args, void *user)
                 context: forwarder];
     }
   else
-    {
+    {// 直接添加观察者
       [r overrideSetterFor: aPath];
       [info addObserver: anObserver
              forKeyPath: aPath

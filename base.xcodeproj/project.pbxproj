@@ -340,6 +340,7 @@
 		18EA6761172EC6170026AC34 /* GSTypeEncoding.c in Sources */ = {isa = PBXBuildFile; fileRef = 18EA675F172EC6170026AC34 /* GSTypeEncoding.c */; };
 		18EA6764172EC7F70026AC34 /* GSTypeEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 18EA6763172EC7F70026AC34 /* GSTypeEncoding.h */; };
 		18EFCC1F172B0B9A003304CA /* gdnc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837D9DE1652D0FF00197E53 /* gdnc.m */; };
+		271A19CF0CB2BE4A5925E9DE /* libPods-Foundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F3691986B021DD250D9C61 /* libPods-Foundation.a */; };
 		AD197C05189A4D5F000F6CF9 /* NSInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD197BFF189A4D5F000F6CF9 /* NSInvocation.m */; };
 		AD197C06189A4D5F000F6CF9 /* NSInvocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD197C00189A4D5F000F6CF9 /* NSInvocationOperation.m */; };
 		AD197C07189A4D5F000F6CF9 /* NSKeyValueObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = AD197C01189A4D5F000F6CF9 /* NSKeyValueObserving.m */; };
@@ -350,6 +351,7 @@
 		AD197C12189A4E98000F6CF9 /* NSMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = AD197C0D189A4E98000F6CF9 /* NSMetadata.h */; };
 		AD197C13189A4E98000F6CF9 /* NSUserNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = AD197C0E189A4E98000F6CF9 /* NSUserNotification.h */; };
 		AD197C14189A4E98000F6CF9 /* NSUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = AD197C0F189A4E98000F6CF9 /* NSUUID.h */; };
+		EE5939D71855F044CDCD9417 /* libPods-gdnc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 526559017257345B1AD6E4EB /* libPods-gdnc.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -389,6 +391,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		066F5DE875324C3395D89339 /* Pods-Foundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foundation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foundation/Pods-Foundation.debug.xcconfig"; sourceTree = "<group>"; };
 		1837D9C61652D0FF00197E53 /* .cvsignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .cvsignore; sourceTree = "<group>"; };
 		1837D9C71652D0FF00197E53 /* AGSHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGSHtml.h; sourceTree = "<group>"; };
 		1837D9C81652D0FF00197E53 /* AGSHtml.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGSHtml.m; sourceTree = "<group>"; };
@@ -1473,6 +1476,8 @@
 		18FE20601628550100389A13 /* ObjCXX.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjCXX.mm; sourceTree = "<group>"; };
 		18FE20611628550100389A13 /* TestInfo */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestInfo; sourceTree = "<group>"; };
 		18FE20621628550100389A13 /* Unicode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Unicode.m; sourceTree = "<group>"; };
+		526559017257345B1AD6E4EB /* libPods-gdnc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gdnc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C542C1D0E2FEDE2269FE86 /* Pods-gdnc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdnc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gdnc/Pods-gdnc.debug.xcconfig"; sourceTree = "<group>"; };
 		AD197BFF189A4D5F000F6CF9 /* NSInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSInvocation.m; sourceTree = "<group>"; };
 		AD197C00189A4D5F000F6CF9 /* NSInvocationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSInvocationOperation.m; sourceTree = "<group>"; };
 		AD197C01189A4D5F000F6CF9 /* NSKeyValueObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSKeyValueObserving.m; path = Source/NSKeyValueObserving.m; sourceTree = "<group>"; };
@@ -1485,6 +1490,9 @@
 		AD197C0E189A4E98000F6CF9 /* NSUserNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserNotification.h; sourceTree = "<group>"; };
 		AD197C0F189A4E98000F6CF9 /* NSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUUID.h; sourceTree = "<group>"; };
 		AD197C15189A51ED000F6CF9 /* GNUmakefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; indentWidth = 8; path = GNUmakefile; sourceTree = "<group>"; tabWidth = 8; };
+		C9F3691986B021DD250D9C61 /* libPods-Foundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Foundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2EF97F0E6C1E4559C8FEF5 /* Pods-Foundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foundation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foundation/Pods-Foundation.release.xcconfig"; sourceTree = "<group>"; };
+		DC32712D50F9E91F549F492F /* Pods-gdnc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdnc.release.xcconfig"; path = "Pods/Target Support Files/Pods-gdnc/Pods-gdnc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1493,6 +1501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1837DA141652D18400197E53 /* Foundation.framework in Frameworks */,
+				EE5939D71855F044CDCD9417 /* libPods-gdnc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1505,12 +1514,24 @@
 				1852899D161399FB0016729B /* libxslt.dylib in Frameworks */,
 				1852899B161399D70016729B /* libz.dylib in Frameworks */,
 				18528999161399720016729B /* libxml2.dylib in Frameworks */,
+				271A19CF0CB2BE4A5925E9DE /* libPods-Foundation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CA20D2FF19CB4254327B00F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				066F5DE875324C3395D89339 /* Pods-Foundation.debug.xcconfig */,
+				CD2EF97F0E6C1E4559C8FEF5 /* Pods-Foundation.release.xcconfig */,
+				68C542C1D0E2FEDE2269FE86 /* Pods-gdnc.debug.xcconfig */,
+				DC32712D50F9E91F549F492F /* Pods-gdnc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1837D9C51652D0FF00197E53 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -1941,6 +1962,8 @@
 				1837D9C51652D0FF00197E53 /* Tools */,
 				18906E421610BC4C0003C892 /* Products */,
 				18906E431610BC4C0003C892 /* Libraries */,
+				0CA20D2FF19CB4254327B00F /* Pods */,
+				872B0A42CF799E40B5C39817 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3540,6 +3563,15 @@
 			path = headers;
 			sourceTree = "<group>";
 		};
+		872B0A42CF799E40B5C39817 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9F3691986B021DD250D9C61 /* libPods-Foundation.a */,
+				526559017257345B1AD6E4EB /* libPods-gdnc.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -3701,6 +3733,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1837DA161652D18400197E53 /* Build configuration list for PBXNativeTarget "gdnc" */;
 			buildPhases = (
+				034B44CABAF59158A7D35ED6 /* [CP] Check Pods Manifest.lock */,
 				1837DA101652D18400197E53 /* Sources */,
 				1837DA121652D18400197E53 /* Frameworks */,
 				1837DA151652D18400197E53 /* CopyFiles */,
@@ -3719,6 +3752,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18394B2D1610D8E400335E85 /* Build configuration list for PBXNativeTarget "Foundation" */;
 			buildPhases = (
+				9C57896B28ED93E5C07C48D6 /* [CP] Check Pods Manifest.lock */,
 				18394B171610D8E300335E85 /* Sources */,
 				18394B181610D8E300335E85 /* Frameworks */,
 				18394B191610D8E300335E85 /* Headers */,
@@ -3772,6 +3806,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		034B44CABAF59158A7D35ED6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gdnc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C57896B28ED93E5C07C48D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Foundation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1837DA101652D18400197E53 /* Sources */ = {
@@ -4007,6 +4088,7 @@
 /* Begin XCBuildConfiguration section */
 		1837DA171652D18400197E53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68C542C1D0E2FEDE2269FE86 /* Pods-gdnc.debug.xcconfig */;
 			buildSettings = {
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -4025,6 +4107,7 @@
 		};
 		1837DA181652D18400197E53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC32712D50F9E91F549F492F /* Pods-gdnc.release.xcconfig */;
 			buildSettings = {
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -4043,6 +4126,7 @@
 		};
 		18394B2E1610D8E400335E85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 066F5DE875324C3395D89339 /* Pods-Foundation.debug.xcconfig */;
 			buildSettings = {
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4081,6 +4165,7 @@
 		};
 		18394B2F1610D8E400335E85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD2EF97F0E6C1E4559C8FEF5 /* Pods-Foundation.release.xcconfig */;
 			buildSettings = {
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
